@@ -1,0 +1,11 @@
+[[edge_functions]]
+  path = "/property/*"
+  function = "og-injector"
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[context.production]
+  [context.production.environment]
+    NETLIFY_NEXT_PRERENDERING_BYPASS = "true"
